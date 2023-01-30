@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../modols/data.dart';
 import 'buttoms/checkbottom.dart';
 
-class settings_component extends StatelessWidget {
-  const settings_component({
+class Settingscontent extends StatelessWidget {
+  const Settingscontent({
     Key? key,
     required this.quality,
   }) : super(key: key);
@@ -14,15 +14,14 @@ class settings_component extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(10),
-        child: Container(
+      padding: const EdgeInsets.all(10),
+      child: Column(children: [
+        const SizedBox(
+          height: 16,
+        ),
+        Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Expanded(
             child: Column(children: [
-          const SizedBox(
-            height: 16,
-          ),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-            Expanded(
-                child: Column(children: [
               Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                 Text(
                   quality.type,
@@ -35,13 +34,15 @@ class settings_component extends StatelessWidget {
                   quality.quality,
                   style: const TextStyle(color: Colors.grey, fontSize: 12, fontWeight: FontWeight.bold),
                 ),
-              ])
-            ])),
-            const SizedBox(
-              width: 32,
-            ),
-            const CHECKICON()
-          ]),
-        ])));
+              ]),
+            ]),
+          ),
+          const SizedBox(
+            width: 32,
+          ),
+          const Checkbottom(),
+        ]),
+      ]),
+    );
   }
 }

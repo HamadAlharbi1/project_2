@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../pages/settings_page.dart';
 import 'buttoms/playbackward.dart';
 import 'buttoms/playforward.dart';
-import 'buttoms/pusebuttom.dart';
+import 'buttoms/puse_buttom.dart';
 
 class play_card extends StatelessWidget {
   const play_card({
@@ -13,36 +14,46 @@ class play_card extends StatelessWidget {
 
   final Color Playbackground;
   final Color Mycolor;
-  static const Playingcolor = Color.fromARGB(166, 241, 241, 241);
+  static const playingcolor = Color.fromARGB(166, 241, 241, 241);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-            color: Playbackground,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(width: .2, color: const Color.fromARGB(255, 0, 0, 0))),
-        child: Column(children: [
-          const SizedBox(height: 45),
-          Container(height: 1, color: Playingcolor),
-          const SizedBox(height: 45),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('6:42', style: TextStyle(fontSize: 12, color: Colors.white)),
-              const PlayForward(),
-              Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(200), border: Border.all(width: 1, color: Mycolor)),
-                  height: 80,
-                  width: 80,
-                  child: const PuseBottm()),
-              const PlayBackward(),
-              const Text('0:01', style: TextStyle(fontSize: 12, color: Colors.white)),
-            ],
-          ),
-          const SizedBox(height: 45),
-        ]));
+      padding: const EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          color: Playbackground,
+          border: Border.all(color: const Color.fromARGB(255, 0, 0, 0), width: .2),
+          borderRadius: BorderRadius.circular(16)),
+      child: Column(children: [
+        const SizedBox(height: 45),
+        Container(height: 1, color: playingcolor),
+        const SizedBox(height: 45),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text('6:42', style: TextStyle(color: Colors.white, fontSize: 12)),
+            const PlayForward(),
+            Container(
+                decoration: BoxDecoration(
+                    border: Border.all(color: Mycolor, width: 1),
+                    borderRadius: const BorderRadius.all(Radius.circular(200))),
+                width: 80,
+                height: 80,
+                child: const PuseButtom()),
+            const PlayBackward(),
+            const Text('0:01', style: TextStyle(color: Colors.white, fontSize: 12)),
+          ],
+        ),
+        Container(
+          alignment: Alignment.center,
+          child: IconButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsPage()));
+              },
+              icon: const Icon(Icons.settings, color: Color.fromARGB(255, 151, 151, 151))),
+        ),
+        const SizedBox(height: 45),
+      ]),
+    );
   }
 }

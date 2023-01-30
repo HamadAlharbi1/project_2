@@ -15,11 +15,7 @@ class _PlayBackward extends State<PlayBackward> {
     return InkWell(
       onTap: () {
         setState(() {
-          if (playbackward == Colors.white) {
-            playbackward = const Color.fromARGB(255, 102, 102, 102);
-          } else {
-            playbackward = Colors.white;
-          }
+          playbackward = playbackward == Colors.white ? const Color.fromARGB(255, 102, 102, 102) : Colors.white;
         });
       },
       child: Row(

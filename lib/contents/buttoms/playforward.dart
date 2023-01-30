@@ -15,11 +15,7 @@ class _PlayForward extends State<PlayForward> {
     return InkWell(
       onTap: () {
         setState(() {
-          if (playforward == Colors.white) {
-            playforward = const Color.fromARGB(255, 102, 102, 102);
-          } else {
-            playforward = Colors.white;
-          }
+          playforward = playforward == Colors.white ? const Color.fromARGB(255, 102, 102, 102) : Colors.white;
         });
       },
       child: Row(

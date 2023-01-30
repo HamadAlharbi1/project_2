@@ -18,7 +18,7 @@ class TopBar extends StatelessWidget {
           color: Mycolor,
         ),
         Text(
-          'Elgar: Viola Concerto ...',
+          'How to Break Away from Overworking, Overdoing, and Underliving ',
           style: TextStyle(
             color: Mycolor,
           ),
@@ -30,7 +30,7 @@ class TopBar extends StatelessWidget {
         Icon(
           Icons.arrow_drop_down,
           color: Mycolor,
-        )
+        ),
       ],
     );
   }

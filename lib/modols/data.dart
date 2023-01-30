@@ -31,3 +31,41 @@ class Books {
   String title;
   Books({required this.img, required this.title});
 }
+
+class Data1 {
+  static List<Product> products = [
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'about',
+        price: '44'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'about',
+        price: '55'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'about',
+        price: '66'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'about',
+        price: '66'),
+  ];
+  static List<Product> cart = [];
+}
+
+class Product {
+  String image;
+  String name;
+  String price;
+  Product({required this.image, required this.name, required this.price});
+}

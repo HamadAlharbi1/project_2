@@ -9,35 +9,21 @@ class text extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
       padding: const EdgeInsets.all(12),
+      width: 300,
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Text('Do Nothing', style: TextStyle(color: Mycolor)),
+        const SizedBox(height: 8),
+        Text('How to Break Away from Overworking, Overdoing, and Underliving ',
+            style: TextStyle(color: Mycolor, fontSize: 20), maxLines: 2),
+        const SizedBox(height: 8),
+        Text('Kindle Edition', style: TextStyle(color: Mycolor)),
+        const SizedBox(height: 8),
         Text(
-          'WOLFGANG AMADEUS MOZART',
+          'A clarion call to work smarter [and] accomplish more by doing less.—Adam Grant',
           style: TextStyle(color: Mycolor),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          'Concerto for Violin and Orchestra No. 3 in G major KV 216',
-          style: TextStyle(color: Mycolor, fontSize: 20),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          'II. Adagio',
-          style: TextStyle(color: Mycolor),
-        ),
-        const SizedBox(
-          height: 8,
-        ),
-        Text(
-          'Kristian Bezuidenhout, Freiburger Barockorchester, Gottfried von der Goltz ',
           maxLines: 2,
-          style: TextStyle(color: Mycolor),
-        )
+        ),
       ]),
     );
   }

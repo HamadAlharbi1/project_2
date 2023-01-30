@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'buttoms/like.dart';
-
-class discoverPagecard extends StatelessWidget {
-  const discoverPagecard({
+class DiscoverPagecard extends StatelessWidget {
+  const DiscoverPagecard({
     Key? key,
   }) : super(key: key);
 
@@ -11,13 +9,11 @@ class discoverPagecard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: 300,
       child: Stack(
         children: [
-          Image.asset(
-            'images/Review-Do-Nothing.jpg',
+          Image.network(
+            'https://m.media-amazon.com/images/I/419elqsC7qS.jpg',
             height: 300,
-            fit: BoxFit.cover,
           ),
         ],
       ),

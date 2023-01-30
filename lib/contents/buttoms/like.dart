@@ -15,11 +15,7 @@ class _LikeState extends State<Like> {
     return InkWell(
       onTap: () {
         setState(() {
-          if (heartColor == Colors.white38) {
-            heartColor = Colors.red;
-          } else {
-            heartColor = Colors.white38;
-          }
+          heartColor = heartColor == Colors.white38 ? Colors.red : Colors.white38;
         });
       },
       child: SizedBox(

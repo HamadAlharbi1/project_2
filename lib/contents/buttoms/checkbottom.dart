@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CHECKICON extends StatefulWidget {
-  const CHECKICON({super.key});
+class Checkbottom extends StatefulWidget {
+  const Checkbottom({super.key});
 
   @override
-  State<CHECKICON> createState() => _PlayBackward();
+  State<Checkbottom> createState() => _PlayBackward();
 }
 
-class _PlayBackward extends State<CHECKICON> {
+class _PlayBackward extends State<Checkbottom> {
   var checkbottom = Icons.circle_outlined;
 
   @override
@@ -15,11 +15,7 @@ class _PlayBackward extends State<CHECKICON> {
     return InkWell(
       onTap: () {
         setState(() {
-          if (checkbottom == Icons.circle_outlined) {
-            checkbottom = Icons.circle_sharp;
-          } else {
-            checkbottom = Icons.circle_outlined;
-          }
+          checkbottom = checkbottom == Icons.circle_outlined ? Icons.circle_sharp : Icons.circle_outlined;
         });
       },
       child: Row(

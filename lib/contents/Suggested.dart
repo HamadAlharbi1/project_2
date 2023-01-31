@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/modols/data.dart';
 
-import '../modols/data.dart';
-
-class TopBageDiscover extends StatelessWidget {
-  const TopBageDiscover({
+class Suggested extends StatelessWidget {
+  const Suggested({
     Key? key,
   }) : super(key: key);
 
@@ -12,7 +11,7 @@ class TopBageDiscover extends StatelessWidget {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        for (var product in Data1.products)
+        for (var product in Data1.suggested)
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: InkWell(
@@ -80,3 +79,6 @@ class TopBageDiscover extends StatelessWidget {
     );
   }
 }
+// الشروط والاحكام ويب بيج
+//  مشاركة التطبيق
+// 

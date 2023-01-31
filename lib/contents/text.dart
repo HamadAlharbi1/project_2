@@ -20,7 +20,7 @@ class text extends StatelessWidget {
         Text('Kindle Edition', style: TextStyle(color: Mycolor)),
         const SizedBox(height: 8),
         Text(
-          'A clarion call to work smarter [and] accomplish more by doing less.—Adam Grant',
+          'How to Break Away from Overworking, Overdoing, and Underliving',
           style: TextStyle(color: Mycolor),
           maxLines: 2,
         ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../pages/Cart.dart';
 import '../pages/discover_page.dart';
 import '../pages/playpage.dart';
+import '../pages/sections.dart';
 
 class navigationBar extends StatefulWidget {
   const navigationBar({super.key});
@@ -18,6 +19,7 @@ class _navigationBarState extends State<navigationBar> {
   Widget build(BuildContext context) {
     Widget body;
     var pages = [
+      const sections(),
       const DiscoverPage(),
       const Playpage(),
       const Cart(),
@@ -27,6 +29,7 @@ class _navigationBarState extends State<navigationBar> {
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         items: const [
+          BottomNavigationBarItem(icon: Icon(Icons.home, color: MyIconcolor), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.search, color: MyIconcolor), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.speaker, color: Colors.white38), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart, color: MyIconcolor), label: ''),
@@ -36,6 +39,7 @@ class _navigationBarState extends State<navigationBar> {
           setState(() {});
         },
         currentIndex: currentIndex,
+        type: BottomNavigationBarType.fixed,
         backgroundColor: const Color.fromARGB(255, 22, 22, 22),
       ),
     );

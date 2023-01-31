@@ -6,104 +6,164 @@ class pay_page extends StatelessWidget {
   const pay_page({super.key});
   @override
   Widget build(BuildContext context) {
+    const usr = '';
     return Scaffold(
-        appBar: AppBar(
-          title: Container(
-            alignment: Alignment.center,
-            child: const Text('طريقة الدفع',
-                style: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 30, fontWeight: FontWeight.normal)),
-          ),
-          backgroundColor: Colors.white,
+      body: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
+            const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
+            const Color.fromARGB(255, 24, 24, 24),
+          ]),
         ),
-        body: ListView(padding: const EdgeInsets.all(25), children: [
+        child: ListView(padding: const EdgeInsets.all(25), children: [
           const SizedBox(
             height: 70,
           ),
           Container(
-            padding: const EdgeInsets.all(20),
             decoration: const BoxDecoration(
               border: Border(),
             ),
-            child: Row(
-              children: const [
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: UnderlineInputBorder(),
-                      //labelText: 'Enter Name',
-                      labelText: 'رقم البطاقة 16 رقم ',
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              border: Border(
-                top: BorderSide(width: 1.0, color: Color(0xFFfafafa)),
-                bottom: BorderSide(width: 0.5, color: Colors.grey),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(102, 220, 220, 219),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
-            ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+              width: 300,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
-                      TextField(
-                        decoration: InputDecoration(
-                          border: UnderlineInputBorder(),
-                          //labelText: 'Enter Name',
-                          labelText: 'تاريخ الانتهاء',
-                        ),
-                      ),
                       SizedBox(
-                        height: 25,
+                        width: 12,
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          border: UnderlineInputBorder(),
-                          //labelText: 'Enter Name',
-                          labelText: 'اسم حامل البطاقة',
-                        ),
+                      Text(
+                        'Card Number',
+                        style: TextStyle(color: Color.fromARGB(255, 0, 68, 124), fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  TextFormField(decoration: const InputDecoration(border: OutlineInputBorder())),
+                ],
+              ),
             ),
           ),
           const SizedBox(
-            height: 60,
+            height: 12,
           ),
           Container(
-            alignment: Alignment.center,
-            child: ElevatedButton(
-              style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 47, 87, 95)),
+            decoration: const BoxDecoration(
+              border: Border(),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(102, 220, 220, 219),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
               ),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ThankYou()),
-                );
-              },
-              child: const Text(
-                'الدفع',
-                style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.white,
-                ),
+              width: 300,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Text(
+                        'expire date',
+                        style: TextStyle(color: Color.fromARGB(255, 0, 68, 124), fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  TextFormField(decoration: const InputDecoration(border: OutlineInputBorder())),
+                ],
               ),
             ),
           ),
-          IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
-        ]));
+          const SizedBox(
+            height: 12,
+          ),
+          Container(
+            decoration: const BoxDecoration(
+              border: Border(),
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(8),
+              decoration: const BoxDecoration(
+                color: Color.fromARGB(102, 220, 220, 219),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
+              ),
+              width: 300,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: const [
+                      SizedBox(
+                        width: 12,
+                      ),
+                      Text(
+                        'Name',
+                        style: TextStyle(color: Color.fromARGB(255, 0, 68, 124), fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 12,
+                  ),
+                  TextFormField(decoration: const InputDecoration(border: OutlineInputBorder())),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151)),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const ThankYou()));
+                  },
+                  style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 47, 87, 95)),
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    decoration: const BoxDecoration(
+                      color: Color.fromARGB(102, 91, 91, 91),
+                      borderRadius: BorderRadius.all(Radius.circular(100)),
+                    ),
+                    child: const Text(
+                      'pay',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 119, 120, 144), fontSize: 24, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ]),
+      ),
+    );
   }
 }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/modols/data.dart';
 
-import '../modols/data.dart';
+import 'bookdetails.dart';
 
-class TopBageDiscover extends StatelessWidget {
-  const TopBageDiscover({
+class HorizentalCards extends StatelessWidget {
+  const HorizentalCards({
     Key? key,
   }) : super(key: key);
 
@@ -12,7 +13,7 @@ class TopBageDiscover extends StatelessWidget {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        for (var product in Data1.products)
+        for (var product in Data1.horizentalCards)
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: InkWell(
@@ -31,25 +32,37 @@ class TopBageDiscover extends StatelessWidget {
                       height: 500,
                       child: Column(children: [
                         const SizedBox(height: 30),
-                        Image(image: NetworkImage(product.image), height: 200),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const Bookdetails()));
+                          },
+                          child: Image(image: NetworkImage(product.image), height: 200),
+                        ),
                         const SizedBox(height: 32),
                         Container(
                           padding: const EdgeInsets.only(left: 15),
                           child: Container(
-                              decoration: const BoxDecoration(
-                                  color: Color.fromARGB(102, 220, 220, 219),
-                                  borderRadius: BorderRadius.all(Radius.circular(8))),
-                              width: 300,
-                              child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-                                Text(product.price,
-                                    style: const TextStyle(
-                                        color: Color.fromARGB(255, 27, 27, 27),
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold)),
-                                Text(product.name,
-                                    style: const TextStyle(
-                                        color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold))
-                              ])),
+                            decoration: const BoxDecoration(
+                              color: Color.fromARGB(102, 220, 220, 219),
+                              borderRadius: BorderRadius.all(Radius.circular(8)),
+                            ),
+                            width: 300,
+                            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                              Text(
+                                product.price,
+                                style: const TextStyle(
+                                  color: Color.fromARGB(255, 27, 27, 27),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                product.name,
+                                style: const TextStyle(
+                                    color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                              ),
+                            ]),
+                          ),
                         ),
                         const SizedBox(
                           height: 12,
@@ -80,3 +93,8 @@ class TopBageDiscover extends StatelessWidget {
     );
   }
 }
+// الشروط والاحكام ويب بيج
+//  مشاركة التطبيق
+// 
+
+  

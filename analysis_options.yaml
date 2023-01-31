@@ -36,6 +36,7 @@ dart_code_metrics:
         - no-equal-then-else
         - prefer-extracting-callbacks: false
         - no-magic-number: false
+        - prefer-trailing-comma: false
         - arguments-ordering:
               child-last: true
         - prefer-correct-identifier-length:

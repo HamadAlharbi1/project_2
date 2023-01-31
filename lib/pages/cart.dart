@@ -22,51 +22,57 @@ class Cart extends StatelessWidget {
               children: [
                 for (var product in Data1.cart)
                   Padding(
-                    padding: const EdgeInsets.all(50),
+                    padding: const EdgeInsets.all(30),
                     child: SizedBox(
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Image(
                             image: NetworkImage(product.image),
-                            height: 280,
+                            height: 200,
                           ),
                           const SizedBox(
-                            height: 32,
+                            height: 12,
                           ),
                           Padding(
                             padding: const EdgeInsets.all(15),
                             child: Text(
                               product.name,
-                              style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 32),
+                              style: const TextStyle(color: Color.fromARGB(255, 205, 205, 205), fontSize: 32),
                             ),
                           ),
                           const SizedBox(
-                            height: 32,
+                            height: 12,
                           ),
                           Text(
                             product.price,
-                            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: Colors.white),
+                            style: const TextStyle(
+                                fontSize: 32, fontWeight: FontWeight.w700, color: Color.fromARGB(255, 198, 198, 198)),
                           ),
                         ],
                       ),
                     ),
                   ),
-                Container(
-                  alignment: Alignment.center,
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const pay_page()));
-                      },
-                      style: ButtonStyle(
-                          foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 47, 87, 95))),
-                      child: const Text('Pay', style: TextStyle(fontSize: 30, color: Colors.white))),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
+                    Container(
+                      alignment: Alignment.center,
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const pay_page()));
+                          },
+                          style: ButtonStyle(
+                              foregroundColor: MaterialStateProperty.all<Color>(const Color.fromARGB(255, 47, 87, 95))),
+                          child: const Text('Pay', style: TextStyle(fontSize: 30, color: Colors.white))),
+                    ),
+                  ],
                 ),
-                IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151))),
               ],
             ),
           ]),

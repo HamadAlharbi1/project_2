@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../contents/My_Card.dart';
-import '../contents/playcard.dart';
-import '../contents/text.dart';
+import '../contents/Top_Bage_Discover.dart';
 
-class Playpage extends StatelessWidget {
-  const Playpage({super.key});
+class authors extends StatelessWidget {
+  const authors({super.key});
   static const Mycolor = Color.fromARGB(184, 232, 229, 229);
   static const Playbackground = Color.fromARGB(53, 113, 114, 113);
   @override
@@ -23,16 +21,14 @@ class Playpage extends StatelessWidget {
             ),
             child: Column(children: const [
               SizedBox(height: 20),
-              MyCard(),
-              text(Mycolor: Mycolor),
-              SizedBox(height: 26),
-              play_card(Playbackground: Playbackground, Mycolor: Mycolor),
-              SizedBox(height: 300),
+              SizedBox(height: 200, child: TopBageDiscover()),
+              Divider(color: Colors.grey),
+              SizedBox(height: 32),
             ]),
           ),
         ]),
       ),
-      backgroundColor: const Color.fromARGB(255, 24, 24, 24),
+      backgroundColor: Mycolor,
     );
   }
 }

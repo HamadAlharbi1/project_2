@@ -41,25 +41,295 @@ class Data1 {
         price: '33'),
     Product(
         image:
-            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
-        name: 'about',
-        price: '44'),
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
     Product(
         image:
             'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
-        name: 'about',
-        price: '55'),
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
     Product(
         image:
             'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
-        name: 'about',
-        price: '66'),
+        name: 'كبر دماغك',
+        price: '33'),
     Product(
         image:
-            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
-        name: 'about',
-        price: '66'),
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
   ];
+  static List<Product> suggested = [
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+  ];
+  static List<Product> others = [
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+  ];
+  static List<Product> horizentalCards = [
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg',
+        name: 'كبر دماغك',
+        price: '33'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/e/3/2/4/e324fdeda6bd616b0b7a25214f3fb9ae3dc4ae4b_597494.jpg',
+        name: 'اقرأ الناس كأنهم كتاب',
+        price: '49 ر.س'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/522151.jpg',
+        name: 'الكل يكذب',
+        price: '69 ر.س.'),
+    Product(
+        image: 'https://m.media-amazon.com/images/I/41LuUlddrhL._SY344_BO1,204,203,200_QL70_ML2_.jpg',
+        name: 'the book theif',
+        price: '69 ر.س.'),
+    Product(
+        image:
+            'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/1/2/122949.jpg',
+        name: 'حياة في الادارة',
+        price: '41 ر.س.'),
+  ];
+
   static List<Product> cart = [];
 }
 

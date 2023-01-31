@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../contents/Suggested_to_you.dart';
+import '../contents/Suggested.dart';
 import '../contents/Top_Bage_Discover.dart';
 import '../contents/others.dart';
-import 'page11.dart';
+import 'Horizental_Cards.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
@@ -24,7 +24,7 @@ class DiscoverPage extends StatelessWidget {
             ),
             child: Column(children: [
               const SizedBox(height: 20),
-              const SizedBox(height: 250, child: TopBageDiscover()),
+              const SizedBox(height: 200, child: TopBageDiscover()),
               const Divider(color: Colors.grey),
               const SizedBox(height: 32),
               Container(
@@ -39,7 +39,7 @@ class DiscoverPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const SizedBox(height: 180, child: Horizental_Cards()),
+              const SizedBox(height: 200, child: HorizentalCards()),
               const SizedBox(height: 32),
               Container(
                 alignment: Alignment.center,
@@ -53,7 +53,7 @@ class DiscoverPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const SizedBox(height: 160, child: Suggested()),
+              const SizedBox(height: 200, child: Suggested()),
               const SizedBox(height: 32),
               Container(
                 alignment: Alignment.center,
@@ -67,7 +67,7 @@ class DiscoverPage extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 16),
-              const SizedBox(height: 160, child: Others()),
+              const SizedBox(height: 200, child: Others()),
             ]),
           ),
         ]),

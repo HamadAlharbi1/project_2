@@ -32,8 +32,8 @@ class _navigationBarState extends State<navigationBar> {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home, color: MyIconcolor), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search, color: MyIconcolor), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.speaker, color: Colors.white38), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.book, color: MyIconcolor), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.headphones, color: Colors.white38), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.favorite, color: MyIconcolor), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.payment, color: MyIconcolor), label: ''),
         ],

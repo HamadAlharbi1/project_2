@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../contents/buttoms/backicon.dart';
 import 'discover_page.dart';
 import 'playpage.dart';
 
@@ -66,11 +67,7 @@ class sections extends StatelessWidget {
                           ),
                           const SizedBox(height: 32),
                           const SizedBox(height: 32),
-                          IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 151, 151, 151)))
+                          BackIcon()
                         ]))
                   ])))
         ]),

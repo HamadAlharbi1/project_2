@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
 import 'bookdetails.dart';
+import 'reading_page.dart';
 
 class HorizentalCards extends StatelessWidget {
   const HorizentalCards({
@@ -46,7 +47,7 @@ class HorizentalCards extends StatelessWidget {
                               color: Color.fromARGB(102, 220, 220, 219),
                               borderRadius: BorderRadius.all(Radius.circular(8)),
                             ),
-                            width: 300,
+                            width: 180,
                             child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
                               Text(
                                 product.name,
@@ -59,14 +60,29 @@ class HorizentalCards extends StatelessWidget {
                         const SizedBox(
                           height: 12,
                         ),
-                        IconButton(
-                            onPressed: () {
-                              Data1.cart.add(product);
-                            },
-                            icon: const Icon(
-                              Icons.favorite,
-                              color: Colors.red,
-                            )),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const reading_page()));
+                              },
+                              icon: const Icon(
+                                Icons.bookmark,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                Data1.cart.add(product);
+                              },
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                          ],
+                        ),
                         const SizedBox(height: 30)
                       ]),
                     ),

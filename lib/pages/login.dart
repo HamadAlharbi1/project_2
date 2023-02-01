@@ -53,7 +53,7 @@ class _loginState extends State<login> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: const [
                           Text(
-                            'About Eqraa',
+                            'About EQRAA',
                             style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),
                           ),
                         ],
@@ -76,7 +76,7 @@ class _loginState extends State<login> {
                   ],
                 ),
                 const SizedBox(
-                  width: 12,
+                  height: 16,
                 ),
                 Container(
                   padding: const EdgeInsets.all(30),

@@ -49,14 +49,6 @@ class HorizentalCards extends StatelessWidget {
                             width: 300,
                             child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
                               Text(
-                                product.price,
-                                style: const TextStyle(
-                                  color: Color.fromARGB(255, 27, 27, 27),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
                                 product.name,
                                 style: const TextStyle(
                                     color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
@@ -67,14 +59,13 @@ class HorizentalCards extends StatelessWidget {
                         const SizedBox(
                           height: 12,
                         ),
-                        TextButton(
+                        IconButton(
                             onPressed: () {
                               Data1.cart.add(product);
                             },
-                            child: const Text(
-                              'Add To Cart',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 201, 201, 201), fontSize: 16, fontWeight: FontWeight.bold),
+                            icon: const Icon(
+                              Icons.favorite,
+                              color: Colors.red,
                             )),
                         const SizedBox(height: 30)
                       ]),

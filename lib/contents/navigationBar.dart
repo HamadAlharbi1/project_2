@@ -4,6 +4,7 @@ import '../pages/Cart.dart';
 import '../pages/discover_page.dart';
 import '../pages/playpage.dart';
 import '../pages/sections.dart';
+import '../pages/subscribe.dart';
 
 class navigationBar extends StatefulWidget {
   const navigationBar({super.key});
@@ -22,7 +23,8 @@ class _navigationBarState extends State<navigationBar> {
       const sections(),
       const DiscoverPage(),
       const Playpage(),
-      const Cart(),
+      const cart(),
+      const subscribe(),
     ];
 
     return Scaffold(
@@ -32,7 +34,8 @@ class _navigationBarState extends State<navigationBar> {
           BottomNavigationBarItem(icon: Icon(Icons.home, color: MyIconcolor), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.search, color: MyIconcolor), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.speaker, color: Colors.white38), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart, color: MyIconcolor), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite, color: MyIconcolor), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.payment, color: MyIconcolor), label: ''),
         ],
         onTap: (newIndex) {
           currentIndex = newIndex;

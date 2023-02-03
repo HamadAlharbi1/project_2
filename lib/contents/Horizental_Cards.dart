@@ -1,25 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
-import '../pages/Bookdetails.dart';
+import '../pages/Listen.dart';
+import '../pages/bookdetails.dart';
 import '../pages/reading_page.dart';
 
-class Others extends StatefulWidget {
-  const Others({
+class HorizentalCards extends StatefulWidget {
+  const HorizentalCards({
     Key? key,
   }) : super(key: key);
 
   @override
-  State<Others> createState() => _OthersState();
+  State<HorizentalCards> createState() => _HorizentalCardsState();
 }
 
-class _OthersState extends State<Others> {
+class _HorizentalCardsState extends State<HorizentalCards> {
+  var heartColor = Colors.white38;
+
   @override
   Widget build(BuildContext context) {
     return ListView(
       scrollDirection: Axis.horizontal,
       children: [
-        for (var product in Data1.others)
+        for (var product in Data1.horizentalCards)
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: InkWell(
@@ -81,10 +84,12 @@ class _OthersState extends State<Others> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(product.author,
-                                    style: const TextStyle(
-                                        color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
-                                    maxLines: 1),
+                                Text(
+                                  product.author,
+                                  maxLines: 1,
+                                  style: const TextStyle(
+                                      color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
                               ]),
                         ),
                         Row(
@@ -109,7 +114,21 @@ class _OthersState extends State<Others> {
                                             )));
                               },
                               child: const Icon(
-                                Icons.search,
+                                Icons.find_in_page,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Listen(
+                                              value: product,
+                                            )));
+                              },
+                              child: const Icon(
+                                Icons.music_video,
                                 color: Color.fromARGB(255, 154, 154, 154),
                               ),
                             ),
@@ -117,6 +136,12 @@ class _OthersState extends State<Others> {
                               onPressed: () {
                                 setState(() {
                                   Data1.cart.add(product);
+
+                                  if (heartColor == Colors.white38) {
+                                    heartColor = Colors.red;
+                                  } else {
+                                    heartColor = Colors.white38;
+                                  }
                                 });
                               },
                               icon: const Icon(

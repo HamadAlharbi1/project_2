@@ -8,7 +8,6 @@ class TermsandConditions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [
             const Color.fromARGB(255, 24, 24, 25).withOpacity(0.8),
@@ -29,7 +28,6 @@ class TermsandConditions extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                     color: Color.fromARGB(102, 220, 220, 219), borderRadius: BorderRadius.all(Radius.circular(12))),
-                height: 350,
                 child: Column(
                   children: [
                     const SizedBox(

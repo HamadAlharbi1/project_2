@@ -26,23 +26,27 @@ class play_card extends StatelessWidget {
           borderRadius: BorderRadius.circular(16)),
       child: Column(children: [
         const SizedBox(height: 45),
-        Container(height: 1, color: playingcolor),
-        const SizedBox(height: 45),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Text('6:42', style: TextStyle(color: Colors.white, fontSize: 12)),
-            const PlayForward(),
-            Container(
-                decoration: BoxDecoration(
-                    border: Border.all(color: Mycolor, width: 1),
-                    borderRadius: const BorderRadius.all(Radius.circular(200))),
-                width: 80,
-                height: 80,
-                child: const PuseButtom()),
-            const PlayBackward(),
-            const Text('0:01', style: TextStyle(color: Colors.white, fontSize: 12)),
-          ],
+        Container(
+          margin: const EdgeInsets.all(24),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //  const Text('6:42', style: TextStyle(color: Colors.white, fontSize: 12)),
+              const PlayForward(),
+              Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Mycolor, width: 1),
+                      borderRadius: const BorderRadius.all(Radius.circular(200))),
+                  width: 80,
+                  height: 80,
+                  child: const PuseButtom()),
+              const PlayBackward(),
+              //    const Text('0:01', style: TextStyle(color: Colors.white, fontSize: 12)),
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 32,
         ),
         Container(
           alignment: Alignment.center,
@@ -52,7 +56,7 @@ class play_card extends StatelessWidget {
               },
               icon: const Icon(Icons.settings, color: Color.fromARGB(255, 151, 151, 151))),
         ),
-        const SizedBox(height: 45),
+        const SizedBox(height: 12),
       ]),
     );
   }

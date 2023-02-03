@@ -11,6 +11,6 @@ class BackIcon extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
-        icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 103, 103, 103)));
+        icon: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 42, 42, 42)));
   }
 }

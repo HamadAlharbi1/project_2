@@ -36,44 +36,53 @@ class _loginState extends State<login> {
             ]),
           ),
           child: Container(
-            padding: const EdgeInsets.all(0),
+            padding: const EdgeInsets.all(20),
             child: ListView(
               children: [
                 const SizedBox(
                   height: 200,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const about()));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'About EQRAA',
-                            style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),
+                SizedBox(
+                  height: 100,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => const about()));
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: const [
+                                Text(
+                                  'About EQRAA',
+                                  style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
+                                ),
+                              ],
+                            ),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context, MaterialPageRoute(builder: (context) => const TermsandConditions()));
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: const [
+                                Text(
+                                  'Terms and Conditions',
+                                  style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 16),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const TermsandConditions()));
-                      },
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Terms and Conditions',
-                            style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const SizedBox(
                   height: 16,

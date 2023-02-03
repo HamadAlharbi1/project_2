@@ -48,3 +48,85 @@ class _navigationBarState extends State<navigationBar> {
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+
+// import '../pages/Cart.dart';
+// import '../pages/discover_page.dart';
+// import '../pages/playpage.dart';
+// import '../pages/sections.dart';
+// import '../pages/subscribe.dart';
+
+// class navigationBar extends StatefulWidget {
+//   final int currentIndex;
+//   const navigationBar({required Key key, required this.currentIndex}) : super(key: key);
+
+//   @override
+//   _navigationBarState createState() => _navigationBarState();
+// }
+
+// class _navigationBarState extends State<navigationBar> {
+//   var _currentIndex;
+
+//   @override
+//   void initState() {
+//     _currentIndex = widget.currentIndex;
+//     super.initState();
+//   }
+
+//   void _onItemTapped(int index) {
+//     setState(() {
+//       _currentIndex = index;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       bottomNavigationBar: BottomNavigationBar(
+//         showSelectedLabels: false,
+//         showUnselectedLabels: false,
+//         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+//         selectedItemColor: Theme.of(context).accentColor,
+//         unselectedItemColor: Theme.of(context).canvasColor,
+//         type: BottomNavigationBarType.fixed,
+//         elevation: 0,
+//         items: [
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.home,
+//               ),
+//               label: ''),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.book,
+//               ),
+//               label: ''),
+//           BottomNavigationBarItem(icon: Icon(Icons.headphones, color: Colors.white38), label: ''),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.favorite,
+//               ),
+//               label: ''),
+//           BottomNavigationBarItem(
+//               icon: Icon(
+//                 Icons.payment,
+//               ),
+//               label: ''),
+//         ],
+//         currentIndex: _currentIndex,
+//         onTap: _onItemTapped,
+//       ),
+//       body: IndexedStack(
+//         index: _currentIndex,
+//         children: [
+//           sections(),
+//           DiscoverPage(),
+//           Playpage(),
+//           cart(),
+//           subscribe(),
+//         ],
+//       ),
+//     );
+//   }
+// }

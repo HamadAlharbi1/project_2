@@ -37,6 +37,7 @@ dart_code_metrics:
         - prefer-extracting-callbacks: false
         - no-magic-number: false
         - prefer-trailing-comma: false
+        - avoid-global-state: false
         - arguments-ordering:
               child-last: true
         - prefer-correct-identifier-length:
@@ -49,6 +50,7 @@ dart_code_metrics:
                   - width
         - newline-before-return: false
         - avoid-ignoring-return-values: false
+        - avoid-wrapping-in-padding: false
         - prefer-match-file-name:
               exclude:
                   - lib/constants/**

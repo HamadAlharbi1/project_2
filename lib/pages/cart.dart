@@ -26,18 +26,32 @@ class cart extends StatelessWidget {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image(
-                            image: NetworkImage(product.image),
-                            height: 200,
+                          Container(
+                            decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16))),
+                            clipBehavior: Clip.hardEdge,
+                            child: Image(
+                              image: NetworkImage(product.image),
+                              height: 200,
+                            ),
                           ),
                           const SizedBox(
                             height: 12,
                           ),
                           Padding(
                             padding: const EdgeInsets.all(15),
-                            child: Text(
-                              product.name,
-                              style: const TextStyle(color: Color.fromARGB(255, 205, 205, 205), fontSize: 20),
+                            child: Container(
+                              decoration: const BoxDecoration(
+                                color: Color.fromARGB(102, 220, 220, 219),
+                                borderRadius: BorderRadius.all(Radius.circular(8)),
+                              ),
+                              width: 180,
+                              child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+                                Text(
+                                  product.name,
+                                  style: const TextStyle(
+                                      color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
+                              ]),
                             ),
                           ),
                           const SizedBox(

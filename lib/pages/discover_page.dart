@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-
 import '../contents/Suggested.dart';
-import '../contents/Top_Bage_Discover.dart';
 import '../contents/others.dart';
-import 'Horizental_Cards.dart';
+import '../contents/Horizental_Cards.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
@@ -24,7 +22,7 @@ class DiscoverPage extends StatelessWidget {
             ),
             child: Column(children: [
               const SizedBox(height: 20),
-              const SizedBox(height: 200, child: TopBageDiscover()),
+              // const SizedBox(height: 200, child: TopBageDiscover()),
               const Divider(color: Colors.grey),
               const SizedBox(height: 32),
               Container(

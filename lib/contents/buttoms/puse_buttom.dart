@@ -15,7 +15,11 @@ class _PuseBottm extends State<PuseButtom> {
     return InkWell(
       onTap: () {
         setState(() {
-          pusebuttom = pusebuttom == Icons.pause ? Icons.play_arrow : Icons.pause;
+          if (pusebuttom == Icons.pause) {
+            pusebuttom = Icons.play_arrow;
+          } else {
+            pusebuttom = Icons.pause;
+          }
         });
       },
       child: Row(

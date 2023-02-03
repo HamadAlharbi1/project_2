@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project_2/modols/data.dart';
 
 class Bookdetails extends StatelessWidget {
-  const Bookdetails({
-    Key? key,
-  }) : super(key: key);
+  final Product value; // object
+
+  const Bookdetails({super.key, required this.value}); // construter
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,26 +20,50 @@ class Bookdetails extends StatelessWidget {
               ]),
             ),
             child: Column(children: [
-              Image.network(
-                  'https://www.jarir.com/cdn-cgi/image/fit=contain,width=auto,height=auto,quality=100,metadata=none/https://ak-asset.jarir.com/akeneo-prod/asset/m1images/5/2/524042.jpg'),
+              const SizedBox(
+                height: 100,
+              ),
+              Container(
+                decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(12))),
+                clipBehavior: Clip.hardEdge,
+                child: Image.network(value.image, height: 300),
+              ),
               const SizedBox(
                 height: 32,
               ),
-              const Text(
-                'وصف الكتاب',
-                style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold, fontSize: 20),
-              ),
+              Container(
+                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.white),
+                  margin: const EdgeInsets.all(0),
+                  clipBehavior: Clip.hardEdge,
+                  child: Text(value.name,
+                      style: const TextStyle(color: Colors.blueGrey, fontSize: 20, fontWeight: FontWeight.bold))),
               const SizedBox(
                 height: 32,
               ),
-              const Text(
-                ' تطرق الكتاب لمواضيع عديده منها على سبيل المثال – خمسة قرارات ستندم عليها– اثنتا عشرة حيلة للضغط؛ انتبه لها– فوائد من فيلم الإعصار– أخطاء يجب تجنبها– خمس أمور يجب أن تتصالح معها تاب يحتوي على افكار ومواضيع جميلة ومفيدة ومتنوعة عن كيفية تكبير دماغك والتغاضي عن الامور الصغيرة. فقد بدأ كتابه عن قصة معبرة لأحد الأدباء تدور احداثها في لندن حيث انه هنالك ٣ اشخاص نالت منهم الحياة وقرروا أن ينتحروا من على جسر لندن الشهير في ليلٍ بهيم، وروى القصة حتى نهايتها وفي نهاية الامر ينصح الكاتب كل يائس محبط استسلم لظلمة القنوط ويقول له: اعط الصباح فرصته؛ لكي يغير الأحوال والظروف التي نشكو منها بجهدنا الدؤوب.',
-                style: TextStyle(color: Color.fromARGB(255, 207, 206, 206), fontSize: 12, fontWeight: FontWeight.bold),
-                textAlign: TextAlign.justify,
-                overflow: TextOverflow.clip,
+              Container(
+                margin: const EdgeInsets.all(24),
+                child: Text(
+                  value.author,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 207, 206, 206), fontSize: 12, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.justify,
+                  overflow: TextOverflow.clip,
+                ),
               ),
-              const SizedBox(
-                height: 32,
+              Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(24),
+                  color: const Color.fromARGB(155, 255, 255, 255),
+                ),
+                margin: const EdgeInsets.symmetric(horizontal: 64),
+                child: Text(
+                  value.describtion,
+                  style: const TextStyle(
+                      color: Color.fromARGB(255, 46, 46, 46), fontSize: 12, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.justify,
+                  overflow: TextOverflow.clip,
+                ),
               ),
               IconButton(
                   onPressed: () {

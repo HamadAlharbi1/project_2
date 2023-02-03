@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:project_2/modols/data.dart';
 
-class Suggested extends StatelessWidget {
+import '../pages/bookdetails.dart';
+import '../pages/reading_page.dart';
+
+class Suggested extends StatefulWidget {
   const Suggested({
     Key? key,
   }) : super(key: key);
 
+  @override
+  State<Suggested> createState() => _SuggestedState();
+}
+
+class _SuggestedState extends State<Suggested> {
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -30,38 +38,96 @@ class Suggested extends StatelessWidget {
                       height: 500,
                       child: Column(children: [
                         const SizedBox(height: 30),
-                        Image(image: NetworkImage(product.image), height: 200),
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context, MaterialPageRoute(builder: (context) => Bookdetails(value: product)));
+                          },
+                          child: Container(
+                              decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16))),
+                              clipBehavior: Clip.hardEdge,
+                              child: Image(image: NetworkImage(product.image), height: 200)),
+                        ),
                         const SizedBox(height: 32),
                         Container(
                           padding: const EdgeInsets.only(left: 15),
                           child: Container(
-                              decoration: const BoxDecoration(
-                                  color: Color.fromARGB(102, 220, 220, 219),
-                                  borderRadius: BorderRadius.all(Radius.circular(8))),
-                              width: 300,
-                              child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-                                Text(product.price,
+                            decoration: const BoxDecoration(
+                              color: Color.fromARGB(102, 220, 220, 219),
+                              borderRadius: BorderRadius.all(Radius.circular(8)),
+                            ),
+                            width: 180,
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(
+                                    product.name,
                                     style: const TextStyle(
-                                        color: Color.fromARGB(255, 27, 27, 27),
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold)),
-                                Text(product.name,
-                                    style: const TextStyle(
-                                        color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold))
-                              ])),
+                                        color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                                  ),
+                                ]),
+                          ),
                         ),
                         const SizedBox(
                           height: 12,
                         ),
-                        TextButton(
-                            onPressed: () {
-                              Data1.cart.add(product);
-                            },
-                            child: const Text(
-                              'Add To Cart',
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 201, 201, 201), fontSize: 16, fontWeight: FontWeight.bold),
-                            )),
+                        Container(
+                          decoration: const BoxDecoration(
+                            color: Color.fromARGB(102, 220, 220, 219),
+                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                          ),
+                          child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  product.author,
+                                  maxLines: 1,
+                                  style: const TextStyle(
+                                      color: Color.fromARGB(255, 1, 1, 1), fontSize: 20, fontWeight: FontWeight.bold),
+                                ),
+                              ]),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            IconButton(
+                              onPressed: () {
+                                Navigator.push(context, MaterialPageRoute(builder: (context) => const reading_page()));
+                              },
+                              icon: const Icon(
+                                Icons.bookmark,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => Bookdetails(
+                                              value: product,
+                                            )));
+                              },
+                              child: const Icon(
+                                Icons.search,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  Data1.cart.add(product);
+                                });
+                              },
+                              icon: const Icon(
+                                Icons.favorite,
+                                color: Color.fromARGB(255, 154, 154, 154),
+                              ),
+                            ),
+                          ],
+                        ),
                         const SizedBox(height: 30)
                       ]),
                     ),
@@ -71,7 +137,12 @@ class Suggested extends StatelessWidget {
               },
               child: Container(
                 decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Column(children: [Image(image: NetworkImage(product.image), height: 200)]),
+                child: Column(children: [
+                  Container(
+                      decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(16))),
+                      clipBehavior: Clip.hardEdge,
+                      child: Image(image: NetworkImage(product.image), height: 200))
+                ]),
               ),
             ),
           ),
@@ -79,6 +150,3 @@ class Suggested extends StatelessWidget {
     );
   }
 }
-// الشروط والاحكام ويب بيج
-//  مشاركة التطبيق
-// 

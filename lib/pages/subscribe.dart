@@ -31,7 +31,6 @@ class subscribe extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                     color: Color.fromARGB(102, 220, 220, 219), borderRadius: BorderRadius.all(Radius.circular(12))),
-                height: 200,
                 child: Column(
                   children: [
                     const SizedBox(
@@ -57,16 +56,22 @@ class subscribe extends StatelessWidget {
                       padding: EdgeInsets.only(left: 12, right: 12),
                       child: Expanded(
                         child: Text(
-                            'works to connect readers with independent booksellers all over the world. ‍We believe local bookstores are essential community hubs that foster culture, curiosity, and a love of reading, and were committed to helping them thrive. Every purchase on the site financially supports independent bookstores. Our platform gives independent bookstores tools to compete online and financial support to help them maintain their presence in local communities.',
+                            'works to connect readers with independent booksellers all over the world. We believe local bookstores are essential community hubs that foster culture, curiosity, and a love of reading, and were committed to helping them thrive. Every purchase on the site financially supports independent bookstores. Our platform gives independent bookstores tools to compete online and financial support to help them maintain their presence in local communities.',
                             style: TextStyle(
                                 color: Color.fromARGB(255, 23, 23, 23), fontSize: 12, fontWeight: FontWeight.bold),
                             textAlign: TextAlign.justify,
                             overflow: TextOverflow.clip),
                       ),
                     ),
+                    const SizedBox(
+                      height: 32,
+                    )
                   ],
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 16,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../contents/Top_Bage_Discover.dart';
-
 class authors extends StatelessWidget {
   const authors({super.key});
   static const Mycolor = Color.fromARGB(184, 232, 229, 229);
@@ -21,7 +19,6 @@ class authors extends StatelessWidget {
             ),
             child: Column(children: const [
               SizedBox(height: 20),
-              SizedBox(height: 200, child: TopBageDiscover()),
               Divider(color: Colors.grey),
               SizedBox(height: 32),
             ]),
